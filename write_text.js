@@ -1,3 +1,5 @@
+let text_written = false;
+
 async function execute() {
     // otherwise we can't compute width...
     await document.fonts.load("12pt Lato");
@@ -12,6 +14,7 @@ async function execute() {
             .map((a) => a.value)
             .map((a) => linkHandle(a, windowWidth))
             .join("<br>");
+    text_written = true;
 }
 
 function linkHandle(s, windowWidth) {
