@@ -86383,7 +86383,8 @@
            * @method perspective
            * @for p5.Camera
            */
-          _main.default.Camera.prototype.perspective = function(fovy, aspect, near, far) {
+          _main.default.Camera.prototype.perspective = function(fovy, aspect, near, far) {  
+            console.log('perspective was called with near/far', near, far);
             this.cameraType = arguments.length > 0 ? 'custom' : 'default';
             if (typeof fovy === 'undefined') {
               fovy = this.defaultCameraFOV;
@@ -86403,7 +86404,7 @@
             if (typeof far === 'undefined') {
               far = this.defaultCameraFar;
             }
-
+            console.log('pre near/far', near, far);
             if (near <= 0.0001) {
               near = 0.01;
               console.log(
@@ -86412,6 +86413,7 @@
               );
             }
 
+            console.log('post near/far', near, far);
             if (far < near) {
               console.log(
                 'Perspective far plane value is less than near plane value. ' +
