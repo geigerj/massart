@@ -4,21 +4,23 @@ let canvasResized = false;
 function preload(){
   bgShader = loadShader('shader.vert', 'shader.frag');
 }
+
 function setup() {
   noStroke();
-  let text = document.getElementById("text");
+  let textDiv = document.getElementById("text");
   createCanvas(
     windowWidth,
-    1.19 * text.scrollHeight + 1,
+    1.19 * textDiv.scrollHeight + 1,
     WEBGL);
 }
 
 function draw() {
   if (document.readyState !== "complete") return;
-  if (!canvasResized && text_written) {
+  if (!canvasResized && text_written) { 
+    let textDiv = document.getElementById("text");
     resizeCanvas(
       windowWidth,
-      1.19 * text.scrollHeight + 1);
+      1.19 * textDiv.scrollHeight + 1);
     canvasResized = true;
   }
   
