@@ -4,6 +4,10 @@
   line-height: 180%
 }
 
+#text, #title {
+  padding-left: .5em;
+}
+
 .nav {
   font-size: 70%;
 }
