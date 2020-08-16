@@ -1,5 +1,5 @@
 let bgShader;
-let resized = false;
+let canvasResized = false;
 
 function preload(){
   bgShader = loadShader('shader.vert', 'shader.frag');
@@ -16,11 +16,11 @@ function setup() {
 
 function draw() {
   if (document.readyState !== "complete") return;
-  if (!resized && text_written) {
+  if (!canvasResized && text_written) {
     resizeCanvas(
       windowWidth,
       1.19 * text.scrollHeight);
-    resized = true;
+    canvasResized = true;
   }
   
   shader(bgShader);
