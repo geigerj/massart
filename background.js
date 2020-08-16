@@ -6,11 +6,10 @@ function preload(){
 }
 function setup() {
   noStroke();
-  // fix Height
   let text = document.getElementById("text");
   createCanvas(
     windowWidth,
-    1.19 * text.scrollHeight,
+    1.19 * text.scrollHeight + 1,
     WEBGL);
 }
 
@@ -19,7 +18,7 @@ function draw() {
   if (!canvasResized && text_written) {
     resizeCanvas(
       windowWidth,
-      1.19 * text.scrollHeight);
+      1.19 * text.scrollHeight + 1);
     canvasResized = true;
   }
   
