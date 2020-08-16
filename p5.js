@@ -87040,6 +87040,7 @@
           // @TODO: combine this function with _setDefaultCamera to compute these values
           // as-needed
           _main.default.Camera.prototype._computeCameraDefaultSettings = function() {
+            console.log('computing default eyeZ with height', this._renderer.height);
             this.defaultCameraFOV = 60 / 180 * Math.PI;
             this.defaultAspectRatio = this._renderer.width / this._renderer.height;
             this.defaultEyeX = 0;
