@@ -86384,6 +86384,7 @@
            * @for p5.Camera
            */
           _main.default.Camera.prototype.perspective = function(fovy, aspect, near, far) {  
+            console.log('caller: ', console.trace());
             console.log('perspective was called with near/far', near, far);
             this.cameraType = arguments.length > 0 ? 'custom' : 'default';
             if (typeof fovy === 'undefined') {

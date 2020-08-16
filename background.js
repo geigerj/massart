@@ -26,7 +26,7 @@ function draw() {
   // Reset perspective. This shouldn't be necessary but for unknown reasons,
   // the perspective sometimes gets set to invalid near/far distances, causing
   // a blank background (can't reproduce consistently)
-  perspective();
+  //perspective();
   
   shader(bgShader);
   bgShader.setUniform('time', frameCount);
