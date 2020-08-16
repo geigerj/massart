@@ -1,0 +1,9 @@
+#main-container {
+  font-size: 200%;
+  color: rgba(8, 8, 65, 0.45);
+  line-height: 180%
+}
+
+.nav {
+  font-size: 70%;
+}
