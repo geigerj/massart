@@ -1,6 +1,5 @@
 // This file copied from Adam's examples
 
-
 attribute vec3 aPosition;
 
 // P5 provides us with texture coordinates for most shapes

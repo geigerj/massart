@@ -25,7 +25,7 @@ function linkHandle(s, windowWidth) {
     return "<a href=\"https://instagram.com/"
         + handle.substring(1)
         + "\">"
-        + handle
+        + handle.toLowerCase()
         + ".".repeat(Math.floor(DOT_COUNT - getTextWidth(handle, "12pt Lato")/DOT_WIDTH))
         + (name || "????") 
         + "</a>";
